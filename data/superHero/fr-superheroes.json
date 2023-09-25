@@ -1,0 +1,270 @@
+{
+	"superheroes": [
+		{
+			"id": 1,
+			"name": "Superman",
+			"alias": "Clark Kent",
+			"description": "Le dernier fils de Krypton, Superman est le héros le plus puissant de la Terre.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"X-ray vision",
+				"invulnerability"
+			]
+		},
+		{
+			"id": 2,
+			"name": "Batman",
+			"alias": "Bruce Wayne",
+			"description": "Un justicier qui utilise son intelligence, son entraînement physique et sa technologie pour lutter contre le crime.",
+			"universe": "DC",
+			"abilities": [
+				"intelligence",
+				"martial arts training",
+				"advanced technology"
+			]
+		},
+		{
+			"id": 3,
+			"name": "Wonder Woman",
+			"alias": "Diana Prince",
+			"description": "Princesse amazone et déesse guerrière.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"resilience",
+				"combat skills"
+			]
+		},
+		{
+			"id": 4,
+			"name": "Spider-Man",
+			"alias": "Peter Parker",
+			"description": "Un lycéen mordu par une araignée radioactive qui acquiert des compétences d'araignée.",
+			"universe": "Marvel",
+			"abilities": [
+				"agility",
+				"superstrength",
+				"wall-crawling",
+				"spider sense"
+			]
+		},
+		{
+			"id": 5,
+			"name": "Iron Man",
+			"alias": "Tony Stark",
+			"description": "Un génie multimillionnaire qui a construit une armure avancée pour devenir un super-héros.",
+			"universe": "Marvel",
+			"abilities": [
+				"intelligence",
+				"advanced technology",
+				"flight",
+				"integrated weapons"
+			]
+		},
+		{
+			"id": 6,
+			"name": "The Flash",
+			"alias": "Barry Allen",
+			"description": "Un scientifique légiste qui a acquis la capacité de se déplacer à des vitesses incroyables.",
+			"universe": "DC",
+			"abilities": [
+				"speed",
+				"enhanced reflexes",
+				"time travel"
+			],
+			"firstAppearance": "Showcase #4 (1956)",
+			"teams": [
+				"Justice League"
+			]
+		},
+		{
+			"id": 7,
+			"name": "Captain America",
+			"alias": "Steve Rogers",
+			"description": "Un soldat qui a été amélioré à la perfection humaine grâce à une expérience.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"agility",
+				"résistance",
+				"endurance"
+			],
+			"firstAppearance": "Captain America Comics #1 (1941)",
+			"teams": [
+				"Avengers",
+				"Invaders"
+			]
+		},
+		{
+			"id": 8,
+			"name": "Aquaman",
+			"alias": "Arthur Curry",
+			"description": "Le roi d'Atlantis qui a la capacité de communiquer avec la vie marine.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"fast swimming",
+				"communication with marine life",
+				"resilience"
+			],
+			"firstAppearance": "More Fun Comics #73 (1941)",
+			"teams": [
+				"Justice League"
+			]
+		},
+		{
+			"id": 9,
+			"name": "Black Widow",
+			"alias": "Natasha Romanoff",
+			"description": "Une espionne hautement qualifiée et ancienne agent du S.H.I.E.L.D.",
+			"universe": "Marvel",
+			"abilities": [
+				"martial arts",
+				"espionage",
+				"marksmanship"
+			],
+			"firstAppearance": "Tales of Suspense #52 (1964)",
+			"teams": [
+				"Avengers",
+				"S.H.I.E.L.D."
+			]
+		},
+		{
+			"id": 10,
+			"name": "Hulk",
+			"alias": "Bruce Banner",
+			"description": "Un scientifique qui se transforme en un monstre géant et vert quand il est en colère.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"resilience",
+				"regeneration"
+			],
+			"firstAppearance": "The Incredible Hulk #1 (1962)",
+			"teams": [
+				"Avengers",
+				"Defenders"
+			]
+		},
+		{
+			"id": 11,
+			"name": "Green Lantern",
+			"alias": "Hal Jordan",
+			"description": "Un pilote qui est choisi pour faire partie du Green Lantern Corps.",
+			"universe": "DC",
+			"abilities": [
+				"flight",
+				"energy construct creation",
+				"energy manipulation"
+			],
+			"firstAppearance": "Showcase #22 (1959)",
+			"teams": [
+				"Justice League",
+				"Green Lantern Corps"
+			]
+		},
+		{
+			"id": 12,
+			"name": "Thor",
+			"alias": "Thor Odinson",
+			"description": "Le dieu du tonnerre d'Asgard et membre des Avengers.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"longevity",
+				"weather control"
+			],
+			"firstAppearance": "Journey into Mystery #83 (1962)",
+			"teams": [
+				"Avengers"
+			]
+		},
+		{
+			"id": 13,
+			"name": "Black Panther",
+			"alias": "T'Challa",
+			"description": "Roi du Wakanda, un royaume africain technologiquement avancé.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"agility",
+				"sharpened senses",
+				"intelligence"
+			],
+			"firstAppearance": "Fantastic Four #52 (1966)",
+			"teams": [
+				"Avengers"
+			]
+		},
+		{
+			"id": 14,
+			"name": "Cyborg",
+			"alias": "Victor Stone",
+			"description": "Un athlète qui, après un terrible accident, a été transformé en cyborg par son père.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"advanced technology",
+				"intelligence"
+			],
+			"firstAppearance": "DC Comics Presents #26 (1980)",
+			"teams": [
+				"Justice League",
+				"Teen Titans"
+			]
+		},
+		{
+			"id": 15,
+			"name": "Captain Marvel",
+			"alias": "Carol Danvers",
+			"description": "Un pilote qui a acquis des capacités surhumaines après un accident avec la technologie extraterrestre.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"energy manipulation"
+			],
+			"firstAppearance": "Marvel Super-Heroes #13 (1968)",
+			"teams": [
+				"Avengers"
+			]
+		},
+		{
+			"id": 16,
+			"name": "Green Arrow",
+			"alias": "Oliver Queen",
+			"description": "Un milliardaire devenu un archer expert après avoir été échoué sur une île déserte.",
+			"universe": "DC",
+			"abilities": [
+				"archery mastery",
+				"martial arts",
+				"strategy"
+			],
+			"firstAppearance": "More Fun Comics #73 (1941)",
+			"teams": [
+				"Justice League"
+			]
+		},
+		{
+			"id": 17,
+			"name": "Doctor Strange",
+			"alias": "Stephen Strange",
+			"description": "Un neurochirurgien devenu le Sorcier Suprême et protecteur de la Terre contre les menaces magiques.",
+			"universe": "Marvel",
+			"abilities": [
+				"magic",
+				"teleportation",
+				"reality manipulation"
+			],
+			"firstAppearance": "Strange Tales #110 (1963)",
+			"teams": [
+				"Avengers",
+				"Defenders"
+			]
+		}
+	]
+}

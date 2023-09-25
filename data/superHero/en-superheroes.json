@@ -1,0 +1,270 @@
+{
+	"superheroes": [
+		{
+			"id": 1,
+			"name": "Superman",
+			"alias": "Clark Kent",
+			"description": "The last son of Krypton, Superman is the most powerful hero on Earth.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"X-ray vision",
+				"invulnerability"
+			]
+		},
+		{
+			"id": 2,
+			"name": "Batman",
+			"alias": "Bruce Wayne",
+			"description": "A vigilante who uses his intelligence, physical training, and technology to fight crime.",
+			"universe": "DC",
+			"abilities": [
+				"intelligence",
+				"martial arts training",
+				"advanced technology"
+			]
+		},
+		{
+			"id": 3,
+			"name": "Wonder Woman",
+			"alias": "Diana Prince",
+			"description": "Amazon princess and warrior goddess.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"resilience",
+				"combat skills"
+			]
+		},
+		{
+			"id": 4,
+			"name": "Spider-Man",
+			"alias": "Peter Parker",
+			"description": "A high school student bitten by a radioactive spider who gains spider-like abilities.",
+			"universe": "Marvel",
+			"abilities": [
+				"agility",
+				"superstrength",
+				"wall-crawling",
+				"spider sense"
+			]
+		},
+		{
+			"id": 5,
+			"name": "Iron Man",
+			"alias": "Tony Stark",
+			"description": "A multi-billionaire genius who built an advanced suit of armor to become a superhero.",
+			"universe": "Marvel",
+			"abilities": [
+				"intelligence",
+				"advanced technology",
+				"flight",
+				"integrated weapons"
+			]
+		},
+		{
+			"id": 6,
+			"name": "The Flash",
+			"alias": "Barry Allen",
+			"description": "A forensic scientist who gained the ability to move at incredible speeds.",
+			"universe": "DC",
+			"abilities": [
+				"speed",
+				"enhanced reflexes",
+				"time travel"
+			],
+			"firstAppearance": "Showcase #4 (1956)",
+			"teams": [
+				"Justice League"
+			]
+		},
+		{
+			"id": 7,
+			"name": "Captain America",
+			"alias": "Steve Rogers",
+			"description": "A soldier who was enhanced to the peak of human physicality by an experimental serum.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"agility",
+				"endurance",
+				"longevity"
+			],
+			"firstAppearance": "Captain America Comics #1 (1941)",
+			"teams": [
+				"Avengers",
+				"Invaders"
+			]
+		},
+		{
+			"id": 8,
+			"name": "Aquaman",
+			"alias": "Arthur Curry",
+			"description": "The king of Atlantis who has the ability to communicate with marine life.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"fast swimming",
+				"communication with marine life",
+				"resilience"
+			],
+			"firstAppearance": "More Fun Comics #73 (1941)",
+			"teams": [
+				"Justice League"
+			]
+		},
+		{
+			"id": 9,
+			"name": "Black Widow",
+			"alias": "Natasha Romanoff",
+			"description": "A highly skilled spy and former agent of S.H.I.E.L.D.",
+			"universe": "Marvel",
+			"abilities": [
+				"martial arts",
+				"espionage",
+				"marksmanship"
+			],
+			"firstAppearance": "Tales of Suspense #52 (1964)",
+			"teams": [
+				"Avengers",
+				"S.H.I.E.L.D."
+			]
+		},
+		{
+			"id": 10,
+			"name": "Hulk",
+			"alias": "Bruce Banner",
+			"description": "A scientist who transforms into a giant, green monster when angry.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"resilience",
+				"regeneration"
+			],
+			"firstAppearance": "The Incredible Hulk #1 (1962)",
+			"teams": [
+				"Avengers",
+				"Defenders"
+			]
+		},
+		{
+			"id": 11,
+			"name": "Green Lantern",
+			"alias": "Hal Jordan",
+			"description": "A pilot who is chosen to be a part of the Green Lantern Corps.",
+			"universe": "DC",
+			"abilities": [
+				"flight",
+				"energy construct creation",
+				"energy manipulation"
+			],
+			"firstAppearance": "Showcase #22 (1959)",
+			"teams": [
+				"Justice League",
+				"Green Lantern Corps"
+			]
+		},
+		{
+			"id": 12,
+			"name": "Thor",
+			"alias": "Thor Odinson",
+			"description": "The god of thunder from Asgard and a member of the Avengers.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"longevity",
+				"weather control"
+			],
+			"firstAppearance": "Journey into Mystery #83 (1962)",
+			"teams": [
+				"Avengers"
+			]
+		},
+		{
+			"id": 13,
+			"name": "Black Panther",
+			"alias": "T'Challa",
+			"description": "King of Wakanda, a technologically advanced African kingdom.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"agility",
+				"sharpened senses",
+				"intelligence"
+			],
+			"firstAppearance": "Fantastic Four #52 (1966)",
+			"teams": [
+				"Avengers"
+			]
+		},
+		{
+			"id": 14,
+			"name": "Cyborg",
+			"alias": "Victor Stone",
+			"description": "An athlete who, after a terrible accident, was transformed into a cyborg by his father.",
+			"universe": "DC",
+			"abilities": [
+				"superstrength",
+				"advanced technology",
+				"intelligence"
+			],
+			"firstAppearance": "DC Comics Presents #26 (1980)",
+			"teams": [
+				"Justice League",
+				"Teen Titans"
+			]
+		},
+		{
+			"id": 15,
+			"name": "Captain Marvel",
+			"alias": "Carol Danvers",
+			"description": "A pilot who acquired superhuman abilities after an accident with alien technology.",
+			"universe": "Marvel",
+			"abilities": [
+				"superstrength",
+				"flight",
+				"energy manipulation"
+			],
+			"firstAppearance": "Marvel Super-Heroes #13 (1968)",
+			"teams": [
+				"Avengers"
+			]
+		},
+		{
+			"id": 16,
+			"name": "Green Arrow",
+			"alias": "Oliver Queen",
+			"description": "A billionaire who became an expert archer after being stranded on a deserted island.",
+			"universe": "DC",
+			"abilities": [
+				"archery mastery",
+				"martial arts",
+				"strategy"
+			],
+			"firstAppearance": "More Fun Comics #73 (1941)",
+			"teams": [
+				"Justice League"
+			]
+		},
+		{
+			"id": 17,
+			"name": "Doctor Strange",
+			"alias": "Stephen Strange",
+			"description": "A neurosurgeon who became the Sorcerer Supreme and protector of Earth against magical threats.",
+			"universe": "Marvel",
+			"abilities": [
+				"magic",
+				"teleportation",
+				"reality manipulation"
+			],
+			"firstAppearance": "Strange Tales #110 (1963)",
+			"teams": [
+				"Avengers",
+				"Defenders"
+			]
+		}
+	]
+}

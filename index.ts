@@ -5,7 +5,7 @@ import fs from 'fs';
 import Server from './class/server';
 import { CONFIG_CORS, SERVER_PORT } from './global/environment';
 import router from './routes/router';
-import invoices from './routes/superhero';
+import superhero from './routes/superhero';
 import cache from './utils/cache';
 import { load } from './utils/data-loader';
 
@@ -29,7 +29,7 @@ server.app.use(cors(CONFIG_CORS));
 
 // Set up routes
 server.app.use('/', router);
-server.app.use('/invoices', invoices);
+server.app.use('/api', superhero);
 
 // Start the server after loading data
 loadData().then(() => {
