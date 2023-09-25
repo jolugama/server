@@ -1,0 +1,98 @@
+[
+	{
+		"customerId" : "202201",
+		"customerName" : "Chris Mathew",
+		"address" : "1st street,2nd block,chennai",
+		"phoneno" : "87789000",
+		"email" : "chris@in.com",
+		"isActive" : 1,
+		"createUser" : "adminuser",
+		"modifyUser" : "adminuser",
+		"createDate" : "2022-07-08T22:00:00.000Z",
+		"modifyDate" : "2022-07-08T22:00:00.000Z"
+	},
+	{
+		"customerId" : "202202",
+		"customerName" : "Ramesh Kumar",
+		"address" : "1st street,2nd block,chennai",
+        "phoneno" : "111111",
+		"email" : null,
+		"isActive" : null,
+		"createUser" : null,
+		"modifyUser" : null,
+		"createDate" : null,
+		"modifyDate" : null
+	},
+	{
+		"customerId" : "202203",
+		"customerName" : "Wasim Jaffer",
+		"address" : "1st street,2nd block,chennai",
+		"phoneno" : null,
+		"email" : null,
+		"isActive" : null,
+		"createUser" : null,
+		"modifyUser" : null,
+		"createDate" : null,
+		"modifyDate" : null
+	},
+	{
+		"customerId" : "202204",
+		"customerName" : "Rahul Sharma",
+		"address" : "1st street,2nd block,chennai",
+		"phoneno" : null,
+		"email" : null,
+		"isActive" : null,
+		"createUser" : null,
+		"modifyUser" : null,
+		"createDate" : null,
+		"modifyDate" : null
+	},
+	{
+		"customerId" : "202205",
+		"customerName" : "Robin Char",
+		"address" : "1st street,2nd block,chennai",
+		"phoneno" : null,
+		"email" : null,
+		"isActive" : null,
+		"createUser" : null,
+		"modifyUser" : null,
+		"createDate" : null,
+		"modifyDate" : null
+	},
+	{
+		"customerId" : "202206",
+		"customerName" : "Umesh Yadav",
+		"address" : "1st street,2nd block,chennai",
+		"phoneno" : null,
+		"email" : null,
+		"isActive" : null,
+		"createUser" : null,
+		"modifyUser" : null,
+		"createDate" : null,
+		"modifyDate" : null
+	},
+	{
+		"customerId" : "202207",
+		"customerName" : "Adam GilChrist",
+		"address" : "1st street,2nd block,chennai",
+		"phoneno" : null,
+		"email" : null,
+		"isActive" : null,
+		"createUser" : null,
+		"modifyUser" : null,
+		"createDate" : null,
+		"modifyDate" : null
+	},
+	{
+		"customerId" : "202208",
+		"customerName" : "Bishaoi",
+		"address" : "1st street,2nd block,chennai",
+		"phoneno" : null,
+		"email" : null,
+		"isActive" : null,
+		"createUser" : null,
+		"modifyUser" : null,
+		"createDate" : null,
+		"modifyDate" : null
+	}
+]

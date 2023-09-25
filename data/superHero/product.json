@@ -1,0 +1,35 @@
+[
+	{
+		"productId" : "p101",
+		"productName" : "Cricket bat",
+		"qty" : 1,
+		"salesPrice" : 1000,
+		"total" : 1000,
+		"createUser" : null,
+		"createDate" : null,
+		"modifyUser" : null,
+		"modifyDate" : null
+	},
+	{
+		"productId" : "p102",
+		"productName" : "Ball",
+		"qty" : 1,
+		"salesPrice" : 100,
+		"total" : 100.00,
+		"createUser" : null,
+		"createDate" : null,
+		"modifyUser" : null,
+		"modifyDate" : null
+	},
+	{
+		"productId" : "p101",
+		"productName" : "Cricket bat",
+		"qty" : 1,
+		"salesPrice" : 1000.000,
+		"total" : 1000.00,
+		"createUser" : "adminuser",
+		"createDate" : "2022-07-10T19:52:00.000Z",
+		"modifyUser" : null,
+		"modifyDate" : null
+	}
+]

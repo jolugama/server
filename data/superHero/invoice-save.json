@@ -1,0 +1,25 @@
+{
+    "invoiceNo":"string",
+    "invoiceDate":"2022-11-05T13:37:18.747Z",
+    "customerId":"string",
+    "customerName":"string",
+    "deliveryAddress":"string",
+    "remarks":"string",
+    "total": 0,
+    "tax": 0,
+    "netTotal": 0,
+    "createUser": "string",
+    "createDate":"2022-11-05T13:37:18.747Z",
+    "details": [
+        {
+            "invoiceNo":"string",
+            "productCode":"string",
+            "productName":"string",
+            "qty":0,
+            "salesPrice":0,
+            "total":0
+
+        }
+      
+    ]
+}

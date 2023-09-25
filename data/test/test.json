@@ -1,0 +1,64 @@
+{
+    "auditHeaders": [
+        {
+            "auditHeaderId": 1,
+            "auditHeaderType": "RETURN",
+            "entityId": 1,
+            "action": "DRAFT",
+            "entityCode": "TEST-RETURN-1",
+            "date": 1668677653188,
+            "authorId": 1,
+            "author": "tsfz admin"
+        },
+        {
+            "auditHeaderId": 2,
+            "auditHeaderType": "RETURN",
+            "entityCode": "TEST-RETURN-1",
+            "entityId": 40714,
+            "action": "DRAFT",
+            "date": 1668677713334,
+            "authorId": 1,
+            "author": "tsfz admin"
+        },
+        {
+            "auditHeaderId": 3,
+            "auditHeaderType": "RETURN",
+            "entityCode": "TEST-RETURN-1",
+            "entityId": 40714,
+            "action": "Comment",
+            "date": 1668677742346,
+            "authorId": 1,
+            "author": "tsfz admin"
+        },
+        {
+            "auditHeaderId": 4,
+            "auditHeaderType": "MISSING",
+            "entityId": -101,
+            "entityCode": "TEST-CLAIM-1",
+            "action": "Stock Count",
+            "date": "2022-08-16T13:45:55.651Z",
+            "authorId": 0,
+            "author": "System automation"
+        },
+        {
+            "auditHeaderId": 5,
+            "auditHeaderType": "MISSING",
+            "entityId": -101,
+            "entityCode": "TEST-CLAIM-1",
+            "action": "In Progress",
+            "date": "2022-08-16T13:45:55.651Z",
+            "authorId": 0,
+            "author": "James Kirkham"
+        },
+        {
+            "auditHeaderId": 6,
+            "auditHeaderType": "MISSING",
+            "entityId": -101,
+            "entityCode": "TEST-CLAIM-1",
+            "action": "Audit",
+            "date": "2022-08-16T13:45:55.651Z",
+            "authorId": 0,
+            "author": "James Kirkham"
+        }
+    ]
+}
