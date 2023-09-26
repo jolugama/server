@@ -36,8 +36,8 @@ server.app.use('/images', (req, res, next) => {
 });
 
 // Middleware random api delay
-const delay1= 1000;
-const delay2= 500;
+const delay1= 800;
+const delay2= 200;
 server.app.use('/api', (req, res, next) => {
   const delay = Math.random() * (delay1 - delay2) + delay2;
   setTimeout(next, delay);

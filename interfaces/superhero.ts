@@ -1,6 +1,14 @@
-export interface Superheroes {
+export interface Superheroes extends Paginator {
     superheroes: Superhero[];
 }
+
+export interface Paginator {
+    length: number;
+    pageSize: number;
+    pageIndex: number;
+    pageEvent?: any;
+  }
+  
 
 export interface Superhero {
     id: number;
@@ -18,7 +26,6 @@ export enum Universe {
     Dc = "DC",
     Marvel = "Marvel",
 }
-
 
 export enum Abilities {
     Superstrength = "superstrength",

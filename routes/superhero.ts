@@ -7,10 +7,11 @@ import cache from './../utils/cache';
 export const router: Router = Router();
 let countryKey = process.argv[2] || 'en';
 
+// TODO: move to other file
 router.get('/change-lang/:lang', (req, res) => {
   const lang = req.params.lang;
   const allowedLanguages = ['en', 'es', 'fr'];
-  
+
   if (!lang || !allowedLanguages.includes(lang)) {
     return res.status(400).json({
       message: 'Invalid language. Allowed languages are en, es, and fr.',
@@ -21,19 +22,40 @@ router.get('/change-lang/:lang', (req, res) => {
   res.json({ message: `lang is ${lang}`, success: true });
 });
 
+// router.get('/superheroes', (req: Request, res: Response) => {
+//   const superheroes = cache.get(`${countryKey}-superheroes`)!
+//   if (superheroes) {
+//     res.send(superheroes);
+//   } else {
+//     res.status(404).send('Superheroes not found');
+//   }
+
+// });
+
 router.get('/superheroes', (req: Request, res: Response) => {
-  const superheroes = cache.get(`${countryKey}-superheroes`)!
-  if (superheroes) {
-    res.send(superheroes);
-  } else {
+  const pageIndex = Number(req.query.pageIndex) || 0;
+  const pageSize = Number(req.query.pageSize) || 5;
+  const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!
+
+  if (superheroes.superheroes.length === 0) {
     res.status(404).send('Superheroes not found');
+    return;
   }
-  
+  const start = pageIndex * pageSize;
+  const end = start + pageSize;
+  res.send({
+    superheroes: superheroes.superheroes.slice(start, end),
+    length: superheroes.superheroes.length,
+    pageSize: pageSize,
+    pageIndex: pageIndex,
+  });
 });
+
+
 
 router.get('/superhero/:id', (req, res) => {
   const id = parseInt(req.params.id, 10);
-  const superheroes:Superheroes = cache.get(`${countryKey}-superheroes`)!;
+  const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!;
   const superhero = superheroes.superheroes.find(hero => hero.id === id);
 
   if (!superhero) {
@@ -50,12 +72,52 @@ router.get('/superhero/:id', (req, res) => {
 });
 
 
+router.get('/superheroes/search', (req, res) => {
+  const { name, alias, description, universe, abilities } = req.query;
+  const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!;
+  let fSuperHeroes = superheroes.superheroes;
 
-router.get('/superheroes/search/:substring', (req, res) => {
+  if (name) {
+    fSuperHeroes = fSuperHeroes.filter(hero => hero.name.toLowerCase().includes(name.toString().toLowerCase()));
+  }
+  if (alias) {
+    fSuperHeroes = fSuperHeroes.filter(hero => hero.alias.toLowerCase().includes(alias.toString().toLowerCase()));
+  }
+  if (description) {
+    fSuperHeroes = fSuperHeroes.filter(hero => hero.description.toLowerCase().includes(description.toString().toLowerCase()));
+  }
+  if (universe) {
+    fSuperHeroes = fSuperHeroes.filter(hero => hero.universe.toString().toLowerCase() === universe.toString().toLowerCase());
+  }
+  if (abilities) {
+    const abilitiesArray = abilities.toString().toLowerCase().trim().split(',');
+    fSuperHeroes = fSuperHeroes.filter(hero =>
+      abilitiesArray.every(ab =>
+        hero.abilities.map(a => a.toString().toLowerCase()).includes(ab)
+      )
+    );
+  }
+
+  if (fSuperHeroes.length === 0) {
+    return res.status(404).json({
+      message: 'No superheroes found.',
+      count: 0,
+      success: false
+    });
+  }
+
+  res.json({
+    superheroes: fSuperHeroes,
+    count: fSuperHeroes.length,
+    success: true
+  });
+});
+
+router.get('/superheroes/searchByName/:substring', (req, res) => {
   const substring = req.params.substring.toLowerCase();
-  const superheroes:Superheroes = cache.get(`${countryKey}-superheroes`)!;
+  const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!;
 
-  const filteredSuperheroes = superheroes.superheroes.filter(hero => 
+  const filteredSuperheroes = superheroes.superheroes.filter(hero =>
     hero.name.toLowerCase().includes(substring)
   );
 
@@ -74,21 +136,24 @@ router.get('/superheroes/search/:substring', (req, res) => {
 });
 
 
+
+
+
 router.put('/superhero/:id', (req, res) => {
   const id = parseInt(req.params.id, 10);
-  const superheroes:Superheroes = cache.get(`${countryKey}-superheroes`)!;
+  const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!;
 
   const index = superheroes.superheroes.findIndex(hero => hero.id === id);
   if (index === -1) {
     return res.status(404).json({ message: 'Superhero not found', success: false });
-  }else if(Number(req.params.id) !== req.body.id){
+  } else if (Number(req.params.id) !== req.body.id) {
     return res.status(404).json({ message: 'id cannot be changed', success: false });
-  }else if (!isSuperhero(req.body)) {
+  } else if (!isSuperhero(req.body)) {
     return res.status(400).json({ message: 'Invalid superhero data', success: false });
   }
   superheroes.superheroes[index] = { ...req.body };
   cache.set(`${countryKey}-superheroes`, superheroes);
-  res.json({superhero: superheroes.superheroes[index], success: true});
+  res.json({ superhero: superheroes.superheroes[index], success: true });
 });
 
 
@@ -100,7 +165,7 @@ router.post('/superhero', (req, res) => {
 
   let nextId = Math.max(...superheroes.superheroes.map(hero => hero.id)) + 1;
   while (superheroes.superheroes.some(hero => hero.id === nextId)) {
-    nextId++; 
+    nextId++;
   }
 
   const newSuperhero = { ...req.body, id: nextId };
@@ -113,9 +178,9 @@ router.post('/superhero', (req, res) => {
 
 router.delete('/superhero/:id', (req, res) => {
   const id = parseInt(req.params.id, 10);
-  const superheroes:Superheroes = cache.get(`${countryKey}-superheroes`)!;
+  const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!;
   const index = superheroes.superheroes.findIndex(hero => hero.id === id);
-  
+
   if (index === -1) {
     return res.status(404).json({ message: 'Superhero not found' });
   }
