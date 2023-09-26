@@ -11,7 +11,8 @@
 				"flight",
 				"X-ray vision",
 				"invulnerability"
-			]
+			],
+			"images": ["superman.png","superman2.png"]
 		},
 		{
 			"id": 2,
@@ -23,7 +24,8 @@
 				"intelligence",
 				"martial arts training",
 				"advanced technology"
-			]
+			],
+			"images": ["batman.png","batman2.png"]
 		},
 		{
 			"id": 3,
@@ -36,7 +38,8 @@
 				"flight",
 				"resilience",
 				"combat skills"
-			]
+			],
+			"images": ["wonder_woman.png"]
 		},
 		{
 			"id": 4,
@@ -49,7 +52,8 @@
 				"superstrength",
 				"wall-crawling",
 				"spider sense"
-			]
+			],
+			"images": ["spiderman.png","spiderman2.png"]
 		},
 		{
 			"id": 5,
@@ -62,7 +66,8 @@
 				"advanced technology",
 				"flight",
 				"integrated weapons"
-			]
+			],
+			"images": ["ironman.png"]
 		},
 		{
 			"id": 6,
@@ -78,7 +83,8 @@
 			"firstAppearance": "Showcase #4 (1956)",
 			"teams": [
 				"Justice League"
-			]
+			],
+			"images": ["flash.png","flash2.png"]
 		},
 		{
 			"id": 7,
@@ -96,7 +102,8 @@
 			"teams": [
 				"Avengers",
 				"Invaders"
-			]
+			],
+			"images": ["captain_america.png","captain_america2.png"]
 		},
 		{
 			"id": 8,
@@ -113,7 +120,8 @@
 			"firstAppearance": "More Fun Comics #73 (1941)",
 			"teams": [
 				"Justice League"
-			]
+			],
+			"images": ["aquaman.png"]
 		},
 		{
 			"id": 9,
@@ -130,7 +138,8 @@
 			"teams": [
 				"Avengers",
 				"S.H.I.E.L.D."
-			]
+			],
+			"images": ["black_widow.png"]
 		},
 		{
 			"id": 10,
@@ -147,7 +156,8 @@
 			"teams": [
 				"Avengers",
 				"Defenders"
-			]
+			],
+			"images": ["hulk.png","hulk2.png"]
 		},
 		{
 			"id": 11,
@@ -164,7 +174,8 @@
 			"teams": [
 				"Justice League",
 				"Green Lantern Corps"
-			]
+			],
+			"images": ["green_lantern.png","green_lantern2.png"]
 		},
 		{
 			"id": 12,
@@ -181,7 +192,8 @@
 			"firstAppearance": "Journey into Mystery #83 (1962)",
 			"teams": [
 				"Avengers"
-			]
+			],
+			"images": ["thor.png","thor2.png"]
 		},
 		{
 			"id": 13,
@@ -198,7 +210,8 @@
 			"firstAppearance": "Fantastic Four #52 (1966)",
 			"teams": [
 				"Avengers"
-			]
+			],
+			"images": ["black_panther.png","black_panther2.png"]
 		},
 		{
 			"id": 14,
@@ -215,7 +228,8 @@
 			"teams": [
 				"Justice League",
 				"Teen Titans"
-			]
+			],
+			"images": ["cyborg.png"]
 		},
 		{
 			"id": 15,
@@ -231,7 +245,8 @@
 			"firstAppearance": "Marvel Super-Heroes #13 (1968)",
 			"teams": [
 				"Avengers"
-			]
+			],
+			"images": ["captain_marvel.png"]
 		},
 		{
 			"id": 16,
@@ -247,7 +262,8 @@
 			"firstAppearance": "More Fun Comics #73 (1941)",
 			"teams": [
 				"Justice League"
-			]
+			],
+			"images": ["green_arrow.png"]
 		},
 		{
 			"id": 17,
@@ -264,7 +280,8 @@
 			"teams": [
 				"Avengers",
 				"Defenders"
-			]
+			],
+			"images": ["doctor_strange.png","doctor_strange2.png"]
 		}
 	]
 }

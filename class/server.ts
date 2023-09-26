@@ -12,6 +12,7 @@ export default class Server {
 
   private constructor() {
     this.app = express();
+  
     this.port = SERVER_PORT;
 
     this.httpServer = http.createServer(this.app);

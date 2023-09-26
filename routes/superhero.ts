@@ -22,7 +22,13 @@ router.get('/change-lang/:lang', (req, res) => {
 });
 
 router.get('/superheroes', (req: Request, res: Response) => {
-  res.send(cache.get(`${countryKey}-superheroes`));
+  const superheroes = cache.get(`${countryKey}-superheroes`)!
+  if (superheroes) {
+    res.send(superheroes);
+  } else {
+    res.status(404).send('Superheroes not found');
+  }
+  
 });
 
 router.get('/superhero/:id', (req, res) => {
