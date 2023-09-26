@@ -3,14 +3,15 @@ export interface Superheroes {
 }
 
 export interface Superhero {
-    id:               number;
-    name:             string;
-    alias:            string;
-    description:      string;
-    universe:         Universe;
-    abilities:        Abilities[];
+    id: number;
+    name: string;
+    alias: string;
+    description: string;
+    universe: Universe;
+    abilities: Abilities[];
     firstAppearance?: string;
-    teams?:           string[];
+    teams?: string[];
+    images?: string[];
 }
 
 export enum Universe {
@@ -53,5 +54,4 @@ export enum Abilities {
     Magic = "magic",
     Teleportation = "teleportation",
     RealityManipulation = "reality manipulation"
-  }
-  
+}
