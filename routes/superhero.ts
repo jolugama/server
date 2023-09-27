@@ -22,25 +22,15 @@ router.get('/change-lang/:lang', (req, res) => {
   res.json({ message: `lang is ${lang}`, success: true });
 });
 
-// router.get('/superheroes', (req: Request, res: Response) => {
-//   const superheroes = cache.get(`${countryKey}-superheroes`)!
-//   if (superheroes) {
-//     res.send(superheroes);
-//   } else {
-//     res.status(404).send('Superheroes not found');
-//   }
-
-// });
-
 router.get('/superheroes', (req: Request, res: Response) => {
-  const pageIndex = Number(req.query.pageIndex) || 0;
-  const pageSize = Number(req.query.pageSize) || 5;
   const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!
-
+  
   if (superheroes.superheroes.length === 0) {
     res.status(404).send('Superheroes not found');
     return;
   }
+  const pageIndex = Number(req.query.pageIndex) || 0;
+  const pageSize = Number(req.query.pageSize) || 5;
   const start = pageIndex * pageSize;
   const end = start + pageSize;
   res.send({
@@ -78,11 +68,15 @@ router.get('/superheroes/search', (req, res) => {
   let fSuperHeroes = superheroes.superheroes;
 
   if (name) {
-    fSuperHeroes = fSuperHeroes.filter(hero => hero.name.toLowerCase().includes(name.toString().toLowerCase()));
+    // fSuperHeroes = fSuperHeroes.filter(hero => hero.name.toLowerCase().includes(name.toString().toLowerCase()));
+    fSuperHeroes = fSuperHeroes.filter(hero => 
+      hero.name.toLowerCase().includes(name.toString().toLowerCase()) || 
+      hero.alias.toLowerCase().includes(name.toString().toLowerCase())
+    );
   }
-  if (alias) {
-    fSuperHeroes = fSuperHeroes.filter(hero => hero.alias.toLowerCase().includes(alias.toString().toLowerCase()));
-  }
+  // if (alias) {
+  //   fSuperHeroes = fSuperHeroes.filter(hero => hero.alias.toLowerCase().includes(alias.toString().toLowerCase()));
+  // }
   if (description) {
     fSuperHeroes = fSuperHeroes.filter(hero => hero.description.toLowerCase().includes(description.toString().toLowerCase()));
   }
@@ -106,10 +100,15 @@ router.get('/superheroes/search', (req, res) => {
     });
   }
 
-  res.json({
-    superheroes: fSuperHeroes,
-    count: fSuperHeroes.length,
-    success: true
+  const pageIndex = Number(req.query.pageIndex) || 0;
+  const pageSize = Number(req.query.pageSize) || 5;
+  const start = pageIndex * pageSize;
+  const end = start + pageSize;
+  res.send({
+    superheroes: fSuperHeroes.slice(start, end),
+    length: fSuperHeroes.length,
+    pageSize: pageSize,
+    pageIndex: pageIndex,
   });
 });
 

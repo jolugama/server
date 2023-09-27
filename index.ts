@@ -29,8 +29,8 @@ server.app.use(cors(CONFIG_CORS));
 
 // Middleware random delay for images
 server.app.use('/images', (req, res, next) => {
-  const delay1= 2000;
-  const delay2= 1000;
+  const delay1= 1200;
+  const delay2= 500;
   const delay = Math.random() * (delay1 - delay2) + delay2;
   setTimeout(next, delay);
 });
