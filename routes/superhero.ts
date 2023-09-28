@@ -24,7 +24,7 @@ router.get('/change-lang/:lang', (req, res) => {
 
 router.get('/superheroes', (req: Request, res: Response) => {
   const superheroes: Superheroes = cache.get(`${countryKey}-superheroes`)!
-  
+
   if (superheroes.superheroes.length === 0) {
     res.status(404).send('Superheroes not found');
     return;
@@ -56,7 +56,7 @@ router.get('/superhero/:id', (req, res) => {
   }
 
   res.json({
-    superhero,
+    superheroes: [superhero],
     success: true
   });
 });
@@ -69,9 +69,9 @@ router.get('/superheroes/search', (req, res) => {
 
   if (name) {
     // fSuperHeroes = fSuperHeroes.filter(hero => hero.name.toLowerCase().includes(name.toString().toLowerCase()));
-    fSuperHeroes = fSuperHeroes.filter(hero => 
-      hero.name.toLowerCase().includes(name.toString().toLowerCase()) || 
-      hero.alias.toLowerCase().includes(name.toString().toLowerCase())
+    fSuperHeroes = fSuperHeroes.filter(hero =>
+      hero.name.toLowerCase().includes(name.toString().toLowerCase()) ||
+      hero.alias?.toLowerCase().includes(name.toString().toLowerCase())
     );
   }
   // if (alias) {
@@ -104,6 +104,10 @@ router.get('/superheroes/search', (req, res) => {
   const pageSize = Number(req.query.pageSize) || 5;
   const start = pageIndex * pageSize;
   const end = start + pageSize;
+  // order by name
+  fSuperHeroes = fSuperHeroes.sort((a, b) =>
+  a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
+);
   res.send({
     superheroes: fSuperHeroes.slice(start, end),
     length: fSuperHeroes.length,
